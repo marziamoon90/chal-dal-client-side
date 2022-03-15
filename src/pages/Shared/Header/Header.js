@@ -1,43 +1,43 @@
+import { BiSearch } from 'react-icons/bi';
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import chalDalIcon from '../../../images/icon/logo-small.webp'
+import { Container, Nav } from 'react-bootstrap';
+import chalDalIcon from '../../../images/icon/logo-small.webp';
+import './Header.css';
+import Dropdown from '../Dropdown/Dropdown';
 
 const Header = () => {
+    {/* <button className='bg-transparent border-0 px-3 py-1'><i className="fas fa-bars" ></i></button> */ }
     return (
         <div>
-            {/* <Navbar  variant="dark"> */}
+            <div style={{ backgroundColor: '#FDD670', height: '55px' }}>
+                <Container >
+                    <div className='d-flex align-items-center justify-content-between'>
+                        <div>
+                            <img
+                                alt=""
+                                src={chalDalIcon}
+                                width="130px"
+                                height="40"
+                                className="chaldalIcon mx-2 "
+                            />
+                        </div>
+                        <div style={{ width: '60vw' }} className='search-box bg-light rounded  d-flex align-items-center justify-content-center'>
+                            <input type="search" className='w-full search-input border-0 ' placeholder='search for products (e.g. eggs,milk,potato)' />
 
-            <Navbar style={{ backgroundColor: '#FDD670', height: '55px' }} collapseOnSelect expand="lg" variant="dark">
-                <Container>
-                    <Navbar.Brand href="#home"><img
-                        alt=""
-                        src={chalDalIcon}
-                        width="154px"
-                        height="40"
-                        className="d-inline-block align-top"
-                    /></Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link href="#features">Features</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
-                            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                            </NavDropdown>
-                        </Nav>
-                        <Nav>
-                            <Nav.Link href="#deets">More deets</Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
-                                Dank memes
-                            </Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
+                            <button className='w-full bg-light fs-4 text-secondary border-0 p-0 m-0' >
+                                <BiSearch />
+                            </button>
+                        </div>
+                        <div className='d-flex align-items-center'>
+                            <Dropdown />
+                            <Nav.Link href="#features">Help</Nav.Link>
+                            <Nav.Link href="#features">Help</Nav.Link>
+                            <Nav.Link href="#features">Help</Nav.Link>
+
+                        </div>
+                    </div>
                 </Container>
-            </Navbar>
+            </div>
         </div>
     );
 };

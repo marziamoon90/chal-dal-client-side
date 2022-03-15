@@ -1,0 +1,19 @@
+.search-box{
+    width: 60%;
+    margin-top: 6px;
+    padding: 0;
+    height: 40px;
+}
+.search-input{
+    height: 40px;
+    width: 95%;
+    border: 0;
+}
+.search-input:focus{
+outline: none;
+}
+@media only screen and (max-width: 760px) {
+    .chaldalIcon{
+    display: none;
+    }
+  }
